@@ -24,8 +24,13 @@
 
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using MmukoOS.RiftBridge.HumanRights;
+using MmukoOS.RiftBridge.HumanRights.EvidencePackaging;
+using MmukoOS.RiftBridge.HumanRights.GovernanceViewModels;
+using MmukoOS.RiftBridge.HumanRights.TranscriptIngestion;
 
 namespace MmukoOS.RiftBridge
 {
@@ -321,6 +326,10 @@ namespace MmukoOS.RiftBridge
         private readonly ConsentState           _consent  = new();
         private readonly AntiGhostingContext    _ghost    = new();
         private          LexerMode              _mode     = LexerMode.Classic;
+        private readonly TranscriptParserService _transcriptParser = new();
+        private readonly HumanRightsGovernanceMapper _humanRightsMapper = new();
+        private readonly EvidencePackageBuilder _evidencePackageBuilder = new();
+        private readonly HumanRightsFirmwareUI _humanRightsPanel = new ConsoleHumanRightsPanel();
 
         // ---- Terminal helpers ----
         private static void Colored(string text, ConsoleColor fg,
@@ -599,9 +608,36 @@ namespace MmukoOS.RiftBridge
             Colored($"  Anti-Ghosting: {_ghost.StatusLine}", fg);
         }
 
+        private void PrintHumanRightsPanel(HumanRightsStatusViewModel status,
+                                           EvidencePackagePreview evidence)
+        {
+            Box("Human Rights Transcript Ingestion Panel", ConsoleColor.Magenta);
+            _humanRightsPanel.RenderDiscriminantTimeline(status);
+            _humanRightsPanel.RenderBreachThresholdIndicator(status);
+            _humanRightsPanel.RenderEscalationReadiness(status);
+            _humanRightsPanel.RenderEvidencePackagePreview(evidence);
+            Console.WriteLine();
+        }
+
+        private static string ResolveTranscriptDirectory()
+        {
+            var cwdPath = Path.Combine(Directory.GetCurrentDirectory(), "transcript");
+            if (Directory.Exists(cwdPath))
+                return cwdPath;
+
+            var repoRelative = Path.GetFullPath(Path.Combine(AppContext.BaseDirectory, "../../../../transcript"));
+            return Directory.Exists(repoRelative) ? repoRelative : cwdPath;
+        }
+
         // ---- Entry: full pipeline ----
         public void Run(string mode)
         {
+            var transcriptDirectory = ResolveTranscriptDirectory();
+            var transcriptEvents = _transcriptParser.ParseDirectory(transcriptDirectory);
+            var humanRightsStatus = _humanRightsMapper.MapToStatus(transcriptEvents, _consent);
+            _ghost.MissedHeartbeats = humanRightsStatus.MissedHeartbeatsFromSilence;
+            var evidencePreview = _evidencePackageBuilder.BuildPreview(transcriptEvents, humanRightsStatus);
+
             BuildTokenStream();
             BuildGsiModules();
 
@@ -667,6 +703,8 @@ namespace MmukoOS.RiftBridge
 
             if (mode is not "boot" and not "rift")
                 PrintEventLog();
+
+            PrintHumanRightsPanel(humanRightsStatus, evidencePreview);
 
             PrintAntiGhosting();
 

@@ -1,0 +1,7 @@
+Institution: Regional Housing Board
+Promise Timeline:
+- 2025-02-01T11:00:00Z: Mandate to provide tenant complaint disclosure.
+- 2025-02-05T11:00:00Z: Promise to complete review.
+Response Timestamps:
+- 2025-02-01T12:00:00Z
+- 2025-02-03T12:00:00Z
