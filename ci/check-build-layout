@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+cd "$ROOT_DIR"
+
+# Enforce orchestration boundary for future changes:
+# do not newly add generated Makefiles under the CMake-owned subtree.
+newly_added_makefiles=$(git diff --cached --name-only --diff-filter=A | rg '^ui/rift/rift/.*/Makefile$|^ui/rift/rift/Makefile$' || true)
+if [ -n "$newly_added_makefiles" ]; then
+  echo "[FAIL] Generated Makefiles must not be added under ui/rift/rift/:"
+  echo "$newly_added_makefiles"
+  exit 1
+fi
+
+# Build outputs must not appear as untracked files in source folders.
+untracked=$(git ls-files --others --exclude-standard)
+violations=$(printf '%s\n' "$untracked" | rg '^(src|include)/.*\.(o|obj|so|a|dll|dylib|exe|out)$|^ui/.*\.(dll|exe|pdb|deps\.json|runtimeconfig\.json)$|^ui/rift/rift/(CMakeFiles/|CMakeCache\.txt|cmake_install\.cmake|CTestTestfile\.cmake|CPack(Config|SourceConfig)\.cmake|Makefile$)' || true)
+
+if [ -n "$violations" ]; then
+  echo "[FAIL] Build layout violations detected (untracked outputs in source folders):"
+  echo "$violations"
+  exit 1
+fi
+
+echo "[PASS] Build layout is clean: untracked outputs are isolated from source trees."

@@ -1,3 +1,21 @@
+# Root native build outputs
+/build/
+/artifacts/
+
+# .NET intermediate outputs
+/ui/bin/
+/ui/obj/
+
+# CMake-generated files for the RIFT subtree (CMake is the only orchestrator here)
+/ui/rift/rift/build/
+/ui/rift/rift/CMakeFiles/
+/ui/rift/rift/CMakeCache.txt
+/ui/rift/rift/cmake_install.cmake
+/ui/rift/rift/CPackConfig.cmake
+/ui/rift/rift/CPackSourceConfig.cmake
+/ui/rift/rift/CTestTestfile.cmake
+/ui/rift/rift/Makefile
+/ui/rift/rift/**/Makefile
 # Canonical build output roots
 artifacts/**
 !artifacts/.gitkeep
