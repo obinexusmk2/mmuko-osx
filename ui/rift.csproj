@@ -11,4 +11,7 @@
     <Description>MMUKO-OS Rift Bridge UI — OBINexus NSIGII Human Rights Protocol</Description>
     <Version>2.0.0</Version>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="ui/rift/rift/rift-555/**/*.cs" />
+  </ItemGroup>
 </Project>

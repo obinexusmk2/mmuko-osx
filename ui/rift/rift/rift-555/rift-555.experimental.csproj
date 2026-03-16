@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <Description>Experimental Rift 555 bridge sandbox.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="RiftBridge.cs" />
+  </ItemGroup>
+</Project>
