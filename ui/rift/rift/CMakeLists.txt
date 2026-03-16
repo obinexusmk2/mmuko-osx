@@ -21,6 +21,13 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+
+# Canonical output directories
+set(ARTIFACT_ROOT "${CMAKE_CURRENT_SOURCE_DIR}/../../../artifacts")
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${ARTIFACT_ROOT}/c/rift-pipeline")
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${ARTIFACT_ROOT}/cpp/rift-pipeline")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${ARTIFACT_ROOT}/cpp/rift-pipeline")
+
 # Options
 option(BUILD_TESTS "Build test suite" ON)
 option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
@@ -136,9 +143,9 @@ endif()
 # Installation
 # ============================================================================
 install(TARGETS rift rift_pipeline nsigii_codec riftbridge_cpp
-    RUNTIME DESTINATION bin
-    LIBRARY DESTINATION lib
-    ARCHIVE DESTINATION lib
+    RUNTIME DESTINATION ${ARTIFACT_ROOT}/c/rift-pipeline
+    LIBRARY DESTINATION ${ARTIFACT_ROOT}/cpp/rift-pipeline
+    ARCHIVE DESTINATION ${ARTIFACT_ROOT}/cpp/rift-pipeline
 )
 
 install(FILES
