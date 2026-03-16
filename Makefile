@@ -5,10 +5,14 @@
 #
 # Build targets:
 #   all          - Build C ring boot system (default)
+#   build-c      - Build native C outputs from src/ + include/
+#   build-cpp    - Build native C++ outputs from src/ + include/
+#   build-csharp - Build C# UI via ui/rift.csproj
+#   build-all    - Build all language targets
 #   ringboot     - Build ring boot executable (C)
-#   riftbridge   - Build riftbridge C++ UI library
+#   riftbridge   - Build riftbridge C++ UI library (legacy alias)
 #   bootimg      - Assemble boot.asm into bootable image
-#   csharp       - Build C# riftbridge UI (requires dotnet)
+#   csharp       - Build C# riftbridge UI (legacy alias)
 #   clean        - Remove build artifacts
 #   run          - Build and run ring boot
 #   test         - Run basic tests
@@ -58,7 +62,7 @@ C_SOURCES   = $(SRC_DIR)/bootsec.c $(SRC_DIR)/ringboot.c
 CXX_SOURCES = $(SRC_DIR)/riftbridge.cpp
 C_UI_SRC    = $(SRC_DIR)/riftbridge.c
 ASM_SOURCE  = $(ASM_DIR)/boot.asm
-CS_SOURCE   = $(UI_DIR)/riftbridge.cs
+CS_PROJECT  = $(UI_DIR)/rift.csproj
 
 # Object files
 C_OBJECTS   = $(BUILD_DIR)/bootsec.o $(BUILD_DIR)/ringboot.o
@@ -70,23 +74,30 @@ RINGBOOT    = $(BUILD_DIR)/ringboot
 BOOTIMG     = $(BUILD_DIR)/mmuko-os.img
 LIBRIFT_A   = $(BUILD_DIR)/libriftbridge.a
 LIBRIFT_SO  = $(BUILD_DIR)/libriftbridge.so
+CPP_LIB_A   = $(BUILD_DIR)/libriftbridge_cpp.a
+CPP_LIB_SO  = $(BUILD_DIR)/libriftbridge_cpp.so
 
 # ============================================================================
 # DEFAULT TARGET
 # ============================================================================
 
-.PHONY: all clean run debug bootimg riftbridge csharp test install help
 
-all: dirs ringboot
+.PHONY: all clean run debug bootimg riftbridge csharp build-c build-cpp build-csharp build-all test install help
+
+all: build-c
 
 help:
 	@echo "MMUKO-OS Build System"
 	@echo "====================="
-	@echo "  make all         - Build ring boot (default)"
+	@echo "  make all         - Build C outputs (default)"
+	@echo "  make build-c     - Build C ring boot + boot image"
+	@echo "  make build-cpp   - Build C++ bridge libraries"
+	@echo "  make build-csharp- Build C# project outputs"
+	@echo "  make build-all   - Build C + C++ + C#"
 	@echo "  make ringboot    - Build ring boot executable"
 	@echo "  make bootimg     - Assemble boot sector image"
-	@echo "  make riftbridge  - Build riftbridge C++ library"
-	@echo "  make csharp      - Build C# UI (requires dotnet)"
+	@echo "  make riftbridge  - Build riftbridge C/C++ library (legacy)"
+	@echo "  make csharp      - Build C# UI (legacy alias)"
 	@echo "  make run         - Build and run ring boot"
 	@echo "  make debug       - Build with debug symbols"
 	@echo "  make test        - Run basic tests"
@@ -102,6 +113,25 @@ ifeq ($(OS),Windows_NT)
 else
 	@mkdir -p $(BUILD_DIR)
 endif
+
+# ============================================================================
+# EXPLICIT LANGUAGE ORCHESTRATION TARGETS
+# ============================================================================
+
+build-c: ringboot bootimg
+
+build-cpp: dirs $(CPP_LIB_A) $(CPP_LIB_SO)
+
+build-csharp:
+	@if command -v $(DOTNET) > /dev/null 2>&1; then \
+		echo "[DOTNET] Building C# rift UI project..."; \
+		mkdir -p artifacts/csharp; \
+		$(DOTNET) build $(CS_PROJECT) -c Release -o artifacts/csharp; \
+	else \
+		echo "[SKIP] dotnet not found - skipping C# build"; \
+	fi
+
+build-all: build-c build-cpp build-csharp
 
 # ============================================================================
 # RING BOOT (C executable)
@@ -143,6 +173,14 @@ $(LIBRIFT_SO): $(C_UI_OBJ) $(CXX_OBJECTS) $(BUILD_DIR)/bootsec.o
 	$(CXX) -shared -o $@ $^ $(LDFLAGS)
 	@echo "[BUILD] Shared library: $@"
 
+$(CPP_LIB_A): $(CXX_OBJECTS)
+	$(AR) rcs $@ $^
+	@echo "[BUILD] C++ static library: $@"
+
+$(CPP_LIB_SO): $(CXX_OBJECTS)
+	$(CXX) -shared -o $@ $^ $(LDFLAGS)
+	@echo "[BUILD] C++ shared library: $@"
+
 $(BUILD_DIR)/riftbridge_c.o: $(SRC_DIR)/riftbridge.c $(INC_DIR)/riftbridge.h
 	$(CC) $(CFLAGS) -fPIC -c -o $@ $<
 
@@ -153,15 +191,7 @@ $(BUILD_DIR)/riftbridge_cpp.o: $(SRC_DIR)/riftbridge.cpp $(INC_DIR)/riftbridge.h
 # C# UI (requires .NET SDK)
 # ============================================================================
 
-csharp:
-	@if command -v $(DOTNET) > /dev/null 2>&1; then \
-		echo "[DOTNET] Building C# riftbridge UI..."; \
-		mkdir -p $(BUILD_DIR)/csharp; \
-		$(DOTNET) build $(UI_DIR)/riftbridge.cs -o $(BUILD_DIR)/csharp 2>/dev/null || \
-		echo "[DOTNET] Note: Requires .NET project setup. See ui/ directory."; \
-	else \
-		echo "[SKIP] dotnet not found - skipping C# build"; \
-	fi
+csharp: build-csharp
 
 # ============================================================================
 # RUN & TEST
@@ -222,7 +252,7 @@ clean:
 ifeq ($(OS),Windows_NT)
 	@if exist $(BUILD_DIR) rmdir /s /q $(BUILD_DIR)
 else
-	rm -rf $(BUILD_DIR)
+	rm -rf $(BUILD_DIR) artifacts/csharp
 endif
 	@echo "[CLEAN] Build artifacts removed"
 
