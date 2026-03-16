@@ -1,0 +1,5 @@
+C:\Users\OBINexus\Projects\transcripts\mmuko-os\ui\obj\Debug\net8.0\rift.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\OBINexus\Projects\transcripts\mmuko-os\ui\obj\Debug\net8.0\rift.AssemblyInfoInputs.cache
+C:\Users\OBINexus\Projects\transcripts\mmuko-os\ui\obj\Debug\net8.0\rift.AssemblyInfo.cs
+C:\Users\OBINexus\Projects\transcripts\mmuko-os\ui\obj\Debug\net8.0\rift.csproj.CoreCompileInputs.cache
+C:\Users\OBINexus\Projects\transcripts\mmuko-os\ui\obj\Debug\net8.0\rift.sourcelink.json

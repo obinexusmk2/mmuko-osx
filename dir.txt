@@ -1,0 +1,1172 @@
+.
+├── -p
+├── Makefile
+├── NSIGII_HUMAN_RIGHTS_PROTOCOL_REVIEW.md
+├── asm
+│   ├── boot.asm
+│   └── boot.bin
+├── build
+│   ├── bootsec.o
+│   ├── ringboot.exe
+│   └── ringboot.o
+├── include
+│   ├── bootsec.h
+│   ├── riftbridge.h
+│   ├── riftbridge.hpp
+│   └── ringboot.h
+├── src
+│   ├── bootsec.c
+│   ├── riftbridge.c
+│   ├── riftbridge.cpp
+│   └── ringboot.c
+├── transcript
+│   ├── 09DEC2025SPEECHNOTE_TOMOGRAPHCITWSGINFORSPACE.txt
+│   ├── 10hourly.txt
+│   ├── Annoncing Bidirectional Learning Thank you Mr Salim 14 NOV 2025.txt
+│   ├── BEINGTOBECOMING_27OV2025.txt
+│   ├── BiDirection Interperator for NeroDivegenct AntiHallicution Safety Critic l srt 10 nov 2025 .txt
+│   ├── BiDirection Interperator for NeroDivegenct AntiHallicution Safety Critical - Copy.txt
+│   ├── Bidirectioanl Learning Framwork with QA bounds_otter_ai.txt
+│   ├── Biological Informatics Presentation_otter_ai.txt
+│   ├── CORN.txt
+│   ├── Civil Uprising - When X Fails, Buil.txt
+│   ├── Data Request and Case Closure_otter_ai.txt
+│   ├── Dimensional Game Theory By Nnamdin.txt
+│   ├── EURODI~1.TXT
+│   ├── Export text - Fan Fiction Ferb Universe and Marvel Tony Universe.wav (04_11_2025).txt
+│   ├── Export text - Mmuko Suite NOV 11 2025.wav (11_11_2025).txt
+│   ├── Export text - NSIGII Here and Now and OBINexus 27 Degree of Dimensionality Consensus Relaity.wav (28_01_2026).txt
+│   ├── Frnakwis mosnter_otter_ai.txt
+│   ├── Geo Call_otter_ai.txt
+│   ├── Gossip Programing16 NOV 2025 AD by Nnamdi Michael Okpala.txt
+│   ├── Governce with Biologiy Sustianbelity _otter_ai (1).txt
+│   ├── Governce with Biologiy Sustianbelity _otter_ai.txt
+│   ├── Govvernce Modle via OBINexus_otter_ai (1).txt
+│   ├── Govvernce Modle via OBINexus_otter_ai.txt
+│   ├── Human Rights Claim 2014 - Nnamdi Michael Okpala 2014 VIOLATION 360 M.txt
+│   ├── Introduuion to DGT incompelte todya 13 nov 2025.txt
+│   ├── LIVE FIRST WORK NEXT.txt
+│   ├── Mmuko PhantomID_otter _15_NOV_2025.txt
+│   ├── NSIGIIFirmwareBIOS_How to cross boot Fat and NTFS mbr and NSIGIIVerfi ASTCab Fingerprint_via Staleless Probe ofArchecture _NSIGII Firmware _https___dev.to_obinexusofficial.txt
+│   ├── NSIGII_MMUKO_Bootloader_Firmware.txt
+│   ├── Neurospark BCI  via 7x7.txt
+│   ├── Neurospark brain computing interface via 7x7 Matrix for Kimentic and Inverse Kime ntic Verb Noun DAG 30 OCT 2025.txt
+│   ├── Newham LUCC Buffer Overflow for Automous Script via Mail Discolure post of money.txt
+│   ├── OBINexus Constutional Updates Pandora Box Healing Begin NOW.txt
+│   ├── OBINexus_MY_RETURNTOOBI_27NOV2025TRANSCENDING_OPERATION_ALINEOFCODEATATIME.txt
+│   ├── OCT102025_1733_2025_OPENSENORYSTILL.txt
+│   ├── ODTS.txt
+│   ├── ONION ROTUER 2 corn.txt
+│   ├── ONION_otter_ai.txt
+│   ├── Ontological Baysian Quatum Superpositve State Isotolpic.txt
+│   ├── PHILOSOPHY_FOR_ANTIBURACTS.txt
+│   ├── Pandoras Box FanFiction by Nnamdi Michael Okpala.txt
+│   ├── Quatum-Classical fo r PHEBIT lIGTHIN BALL.txt
+│   ├── README.txt
+│   ├── SPARSETOMOGRPHICFORRIFTEST09DEC2025.txt
+│   ├── SPECHNOTESOPENSENSESTILL10DEC2025.txt
+│   ├── Spiritual Anchor Initiative_otter_ai.txt
+│   ├── TRANSCRIPT-STREAM-OF-CONSIONESS.txt
+│   ├── The Rebirth fo OBInexus.txt
+│   ├── The World First Constutional Use of the AURASEAL on obinexus github 7 NOV 2025.txt
+│   ├── Threwaycolourablegraph.txt
+│   ├── bci.txt
+│   ├── captions.txt
+│   ├── dse.txt
+│   ├── gocall 2_otter_ai.txt
+│   ├── gosilang_with_rift_16nov2025.txt
+│   ├── hum_otter_ai.txt
+│   ├── nigerian imposed wiht  biafra.txt
+│   ├── obinxus_biz.txt
+│   ├── persona devloepmntn 04 nov 2025.txt
+│   ├── persona devloepmntn 04 nov 2025_otter_ai.txt
+│   ├── quantum classic firld reosluton for plasmio with lgithin ball.txt
+│   ├── rift222.txt
+│   ├── spasdetime.txt
+│   ├── zero knoeldge proof system .txt
+│   └── zz.txt
+├── tree.txt
+└── ui
+    ├── bin
+    │   └── Debug
+    │       └── net8.0
+    ├── obj
+    │   ├── Debug
+    │   │   └── net8.0
+    │   │       ├── ref
+    │   │       ├── refint
+    │   │       ├── rift.AssemblyInfo.cs
+    │   │       ├── rift.AssemblyInfoInputs.cache
+    │   │       ├── rift.GeneratedMSBuildEditorConfig.editorconfig
+    │   │       ├── rift.GlobalUsings.g.cs
+    │   │       ├── rift.assets.cache
+    │   │       ├── rift.csproj.CoreCompileInputs.cache
+    │   │       ├── rift.csproj.FileListAbsolute.txt
+    │   │       └── rift.sourcelink.json
+    │   ├── project.assets.json
+    │   ├── project.nuget.cache
+    │   ├── rift.csproj.nuget.dgspec.json
+    │   ├── rift.csproj.nuget.g.props
+    │   └── rift.csproj.nuget.g.targets
+    ├── rift
+    │   ├── build
+    │   │   ├── CMakeCache.txt
+    │   │   ├── CMakeFiles
+    │   │   │   ├── 3.28.3
+    │   │   │   │   ├── CMakeCCompiler.cmake
+    │   │   │   │   ├── CMakeCXXCompiler.cmake
+    │   │   │   │   ├── CMakeDetermineCompilerABI_C.bin
+    │   │   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+    │   │   │   │   ├── CMakeSystem.cmake
+    │   │   │   │   ├── CompilerIdC
+    │   │   │   │   │   ├── CMakeCCompilerId.c
+    │   │   │   │   │   └── a.out
+    │   │   │   │   └── CompilerIdCXX
+    │   │   │   │       ├── CMakeCXXCompilerId.cpp
+    │   │   │   │       └── a.out
+    │   │   │   ├── CMakeConfigureLog.yaml
+    │   │   │   ├── CMakeDirectoryInformation.cmake
+    │   │   │   ├── Makefile.cmake
+    │   │   │   ├── Makefile2
+    │   │   │   ├── TargetDirectories.txt
+    │   │   │   ├── cmake.check_cache
+    │   │   │   ├── nsigii_codec.dir
+    │   │   │   │   ├── DependInfo.cmake
+    │   │   │   │   ├── build.make
+    │   │   │   │   ├── cmake_clean.cmake
+    │   │   │   │   ├── cmake_clean_target.cmake
+    │   │   │   │   ├── compiler_depend.make
+    │   │   │   │   ├── compiler_depend.ts
+    │   │   │   │   ├── depend.make
+    │   │   │   │   ├── flags.make
+    │   │   │   │   ├── link.txt
+    │   │   │   │   ├── nsigii-codec
+    │   │   │   │   │   ├── nsigii_codec.c.o
+    │   │   │   │   │   └── nsigii_codec.c.o.d
+    │   │   │   │   └── progress.make
+    │   │   │   ├── progress.marks
+    │   │   │   ├── rift.dir
+    │   │   │   │   ├── DependInfo.cmake
+    │   │   │   │   ├── build.make
+    │   │   │   │   ├── cmake_clean.cmake
+    │   │   │   │   ├── compiler_depend.make
+    │   │   │   │   ├── compiler_depend.ts
+    │   │   │   │   ├── depend.make
+    │   │   │   │   ├── flags.make
+    │   │   │   │   ├── link.txt
+    │   │   │   │   ├── main.c.o
+    │   │   │   │   ├── main.c.o.d
+    │   │   │   │   └── progress.make
+    │   │   │   ├── rift_pipeline.dir
+    │   │   │   │   ├── DependInfo.cmake
+    │   │   │   │   ├── build.make
+    │   │   │   │   ├── cmake_clean.cmake
+    │   │   │   │   ├── cmake_clean_target.cmake
+    │   │   │   │   ├── compiler_depend.make
+    │   │   │   │   ├── compiler_depend.ts
+    │   │   │   │   ├── depend.make
+    │   │   │   │   ├── flags.make
+    │   │   │   │   ├── link.txt
+    │   │   │   │   ├── progress.make
+    │   │   │   │   ├── rift-000
+    │   │   │   │   │   ├── rift_000_tokenizer.c.o
+    │   │   │   │   │   └── rift_000_tokenizer.c.o.d
+    │   │   │   │   ├── rift-001
+    │   │   │   │   │   ├── rift_001_process.c.o
+    │   │   │   │   │   └── rift_001_process.c.o.d
+    │   │   │   │   ├── rift-333
+    │   │   │   │   │   ├── rift_333_ast.c.o
+    │   │   │   │   │   └── rift_333_ast.c.o.d
+    │   │   │   │   ├── rift-444
+    │   │   │   │   │   ├── rift_444_target.c.o
+    │   │   │   │   │   └── rift_444_target.c.o.d
+    │   │   │   │   └── rift-555
+    │   │   │   │       ├── rift_555_bridge.c.o
+    │   │   │   │       └── rift_555_bridge.c.o.d
+    │   │   │   ├── rift_tests.dir
+    │   │   │   │   ├── DependInfo.cmake
+    │   │   │   │   ├── build.make
+    │   │   │   │   ├── cmake_clean.cmake
+    │   │   │   │   ├── compiler_depend.make
+    │   │   │   │   ├── compiler_depend.ts
+    │   │   │   │   ├── depend.make
+    │   │   │   │   ├── flags.make
+    │   │   │   │   ├── link.txt
+    │   │   │   │   ├── progress.make
+    │   │   │   │   └── tests
+    │   │   │   │       ├── test_rift.c.o
+    │   │   │   │       └── test_rift.c.o.d
+    │   │   │   └── riftbridge_cpp.dir
+    │   │   │       ├── DependInfo.cmake
+    │   │   │       ├── build.make
+    │   │   │       ├── cmake_clean.cmake
+    │   │   │       ├── cmake_clean_target.cmake
+    │   │   │       ├── compiler_depend.make
+    │   │   │       ├── compiler_depend.ts
+    │   │   │       ├── depend.make
+    │   │   │       ├── flags.make
+    │   │   │       ├── link.txt
+    │   │   │       ├── progress.make
+    │   │   │       └── rift-555
+    │   │   │           ├── rift_555_bridge_cpp.cpp.o
+    │   │   │           └── rift_555_bridge_cpp.cpp.o.d
+    │   │   ├── CPackConfig.cmake
+    │   │   ├── CPackSourceConfig.cmake
+    │   │   ├── CTestTestfile.cmake
+    │   │   ├── Makefile
+    │   │   ├── cmake_install.cmake
+    │   │   ├── libnsigii_codec.a
+    │   │   ├── librift_pipeline.a
+    │   │   ├── libriftbridge_cpp.a
+    │   │   ├── rift
+    │   │   └── rift_tests
+    │   ├── rift
+    │   │   ├── CMakeCache.txt
+    │   │   ├── CMakeFiles
+    │   │   │   ├── 3.28.3
+    │   │   │   │   ├── CMakeCCompiler.cmake
+    │   │   │   │   ├── CMakeCXXCompiler.cmake
+    │   │   │   │   ├── CMakeDetermineCompilerABI_C.bin
+    │   │   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+    │   │   │   │   ├── CMakeSystem.cmake
+    │   │   │   │   ├── CompilerIdC
+    │   │   │   │   │   ├── CMakeCCompilerId.c
+    │   │   │   │   │   └── a.out
+    │   │   │   │   └── CompilerIdCXX
+    │   │   │   │       ├── CMakeCXXCompilerId.cpp
+    │   │   │   │       └── a.out
+    │   │   │   ├── CMakeConfigureLog.yaml
+    │   │   │   ├── CMakeDirectoryInformation.cmake
+    │   │   │   ├── Makefile.cmake
+    │   │   │   ├── Makefile2
+    │   │   │   ├── TargetDirectories.txt
+    │   │   │   ├── cmake.check_cache
+    │   │   │   ├── nsigii_codec.dir
+    │   │   │   │   ├── DependInfo.cmake
+    │   │   │   │   ├── build.make
+    │   │   │   │   ├── cmake_clean.cmake
+    │   │   │   │   ├── cmake_clean_target.cmake
+    │   │   │   │   ├── compiler_depend.make
+    │   │   │   │   ├── compiler_depend.ts
+    │   │   │   │   ├── depend.make
+    │   │   │   │   ├── flags.make
+    │   │   │   │   ├── link.txt
+    │   │   │   │   └── progress.make
+    │   │   │   ├── progress.marks
+    │   │   │   ├── rift.dir
+    │   │   │   │   ├── DependInfo.cmake
+    │   │   │   │   ├── build.make
+    │   │   │   │   ├── cmake_clean.cmake
+    │   │   │   │   ├── compiler_depend.make
+    │   │   │   │   ├── compiler_depend.ts
+    │   │   │   │   ├── depend.make
+    │   │   │   │   ├── flags.make
+    │   │   │   │   ├── link.txt
+    │   │   │   │   └── progress.make
+    │   │   │   ├── rift_pipeline.dir
+    │   │   │   │   ├── DependInfo.cmake
+    │   │   │   │   ├── build.make
+    │   │   │   │   ├── cmake_clean.cmake
+    │   │   │   │   ├── cmake_clean_target.cmake
+    │   │   │   │   ├── compiler_depend.make
+    │   │   │   │   ├── compiler_depend.ts
+    │   │   │   │   ├── depend.make
+    │   │   │   │   ├── flags.make
+    │   │   │   │   ├── link.txt
+    │   │   │   │   └── progress.make
+    │   │   │   ├── rift_tests.dir
+    │   │   │   │   ├── DependInfo.cmake
+    │   │   │   │   ├── build.make
+    │   │   │   │   ├── cmake_clean.cmake
+    │   │   │   │   ├── compiler_depend.make
+    │   │   │   │   ├── compiler_depend.ts
+    │   │   │   │   ├── depend.make
+    │   │   │   │   ├── flags.make
+    │   │   │   │   ├── link.txt
+    │   │   │   │   └── progress.make
+    │   │   │   └── riftbridge_cpp.dir
+    │   │   │       ├── DependInfo.cmake
+    │   │   │       ├── build.make
+    │   │   │       ├── cmake_clean.cmake
+    │   │   │       ├── cmake_clean_target.cmake
+    │   │   │       ├── compiler_depend.make
+    │   │   │       ├── compiler_depend.ts
+    │   │   │       ├── depend.make
+    │   │   │       ├── flags.make
+    │   │   │       ├── link.txt
+    │   │   │       └── progress.make
+    │   │   ├── CMakeLists.txt
+    │   │   ├── CPackConfig.cmake
+    │   │   ├── CPackSourceConfig.cmake
+    │   │   ├── CTestTestfile.cmake
+    │   │   ├── Makefile
+    │   │   ├── README.md
+    │   │   ├── SUMMARY.md
+    │   │   ├── USAGE.md
+    │   │   ├── build
+    │   │   │   ├── CMakeCache.txt
+    │   │   │   ├── CMakeFiles
+    │   │   │   │   ├── 3.28.3
+    │   │   │   │   │   ├── CMakeCCompiler.cmake
+    │   │   │   │   │   ├── CMakeCXXCompiler.cmake
+    │   │   │   │   │   ├── CMakeDetermineCompilerABI_C.bin
+    │   │   │   │   │   ├── CMakeDetermineCompilerABI_CXX.bin
+    │   │   │   │   │   ├── CMakeSystem.cmake
+    │   │   │   │   │   ├── CompilerIdC
+    │   │   │   │   │   │   ├── CMakeCCompilerId.c
+    │   │   │   │   │   │   └── a.out
+    │   │   │   │   │   └── CompilerIdCXX
+    │   │   │   │   │       ├── CMakeCXXCompilerId.cpp
+    │   │   │   │   │       └── a.out
+    │   │   │   │   ├── CMakeConfigureLog.yaml
+    │   │   │   │   ├── CMakeDirectoryInformation.cmake
+    │   │   │   │   ├── Makefile.cmake
+    │   │   │   │   ├── Makefile2
+    │   │   │   │   ├── TargetDirectories.txt
+    │   │   │   │   ├── cmake.check_cache
+    │   │   │   │   ├── nsigii_codec.dir
+    │   │   │   │   │   ├── DependInfo.cmake
+    │   │   │   │   │   ├── build.make
+    │   │   │   │   │   ├── cmake_clean.cmake
+    │   │   │   │   │   ├── cmake_clean_target.cmake
+    │   │   │   │   │   ├── compiler_depend.internal
+    │   │   │   │   │   ├── compiler_depend.make
+    │   │   │   │   │   ├── compiler_depend.ts
+    │   │   │   │   │   ├── depend.make
+    │   │   │   │   │   ├── flags.make
+    │   │   │   │   │   ├── link.txt
+    │   │   │   │   │   ├── nsigii-codec
+    │   │   │   │   │   │   ├── nsigii_codec.c.o
+    │   │   │   │   │   │   └── nsigii_codec.c.o.d
+    │   │   │   │   │   └── progress.make
+    │   │   │   │   ├── progress.marks
+    │   │   │   │   ├── rift.dir
+    │   │   │   │   │   ├── DependInfo.cmake
+    │   │   │   │   │   ├── build.make
+    │   │   │   │   │   ├── cmake_clean.cmake
+    │   │   │   │   │   ├── compiler_depend.internal
+    │   │   │   │   │   ├── compiler_depend.make
+    │   │   │   │   │   ├── compiler_depend.ts
+    │   │   │   │   │   ├── depend.make
+    │   │   │   │   │   ├── flags.make
+    │   │   │   │   │   ├── link.txt
+    │   │   │   │   │   ├── main.c.o
+    │   │   │   │   │   ├── main.c.o.d
+    │   │   │   │   │   └── progress.make
+    │   │   │   │   ├── rift_pipeline.dir
+    │   │   │   │   │   ├── DependInfo.cmake
+    │   │   │   │   │   ├── build.make
+    │   │   │   │   │   ├── cmake_clean.cmake
+    │   │   │   │   │   ├── cmake_clean_target.cmake
+    │   │   │   │   │   ├── compiler_depend.internal
+    │   │   │   │   │   ├── compiler_depend.make
+    │   │   │   │   │   ├── compiler_depend.ts
+    │   │   │   │   │   ├── depend.make
+    │   │   │   │   │   ├── flags.make
+    │   │   │   │   │   ├── link.txt
+    │   │   │   │   │   ├── progress.make
+    │   │   │   │   │   ├── rift-000
+    │   │   │   │   │   │   ├── rift_000_tokenizer.c.o
+    │   │   │   │   │   │   └── rift_000_tokenizer.c.o.d
+    │   │   │   │   │   ├── rift-001
+    │   │   │   │   │   │   ├── rift_001_process.c.o
+    │   │   │   │   │   │   └── rift_001_process.c.o.d
+    │   │   │   │   │   ├── rift-333
+    │   │   │   │   │   │   ├── rift_333_ast.c.o
+    │   │   │   │   │   │   └── rift_333_ast.c.o.d
+    │   │   │   │   │   ├── rift-444
+    │   │   │   │   │   │   ├── rift_444_target.c.o
+    │   │   │   │   │   │   └── rift_444_target.c.o.d
+    │   │   │   │   │   └── rift-555
+    │   │   │   │   │       ├── rift_555_bridge.c.o
+    │   │   │   │   │       └── rift_555_bridge.c.o.d
+    │   │   │   │   ├── rift_tests.dir
+    │   │   │   │   │   ├── DependInfo.cmake
+    │   │   │   │   │   ├── build.make
+    │   │   │   │   │   ├── cmake_clean.cmake
+    │   │   │   │   │   ├── compiler_depend.internal
+    │   │   │   │   │   ├── compiler_depend.make
+    │   │   │   │   │   ├── compiler_depend.ts
+    │   │   │   │   │   ├── depend.make
+    │   │   │   │   │   ├── flags.make
+    │   │   │   │   │   ├── link.txt
+    │   │   │   │   │   ├── progress.make
+    │   │   │   │   │   └── tests
+    │   │   │   │   │       ├── test_rift.c.o
+    │   │   │   │   │       └── test_rift.c.o.d
+    │   │   │   │   └── riftbridge_cpp.dir
+    │   │   │   │       ├── DependInfo.cmake
+    │   │   │   │       ├── build.make
+    │   │   │   │       ├── cmake_clean.cmake
+    │   │   │   │       ├── cmake_clean_target.cmake
+    │   │   │   │       ├── compiler_depend.internal
+    │   │   │   │       ├── compiler_depend.make
+    │   │   │   │       ├── compiler_depend.ts
+    │   │   │   │       ├── depend.make
+    │   │   │   │       ├── flags.make
+    │   │   │   │       ├── link.txt
+    │   │   │   │       ├── progress.make
+    │   │   │   │       └── rift-555
+    │   │   │   │           ├── rift_555_bridge_cpp.cpp.o
+    │   │   │   │           └── rift_555_bridge_cpp.cpp.o.d
+    │   │   │   ├── CPackConfig.cmake
+    │   │   │   ├── CPackSourceConfig.cmake
+    │   │   │   ├── CTestTestfile.cmake
+    │   │   │   ├── Makefile
+    │   │   │   ├── cmake_install.cmake
+    │   │   │   ├── libnsigii_codec.a
+    │   │   │   ├── librift_pipeline.a
+    │   │   │   ├── libriftbridge_cpp.a
+    │   │   │   └── rift_tests
+    │   │   ├── build.sh
+    │   │   ├── cmake_install.cmake
+    │   │   ├── dist
+    │   │   │   ├── main.o
+    │   │   │   ├── nsigii_codec.o
+    │   │   │   ├── rift_000.o
+    │   │   │   ├── rift_001.o
+    │   │   │   ├── rift_333.o
+    │   │   │   ├── rift_444.o
+    │   │   │   └── rift_555.o
+    │   │   ├── docs
+    │   │   │   ├── TRANSCRIPTS
+    │   │   │   │   ├── Fitler and Flash Interdepe CISCO Se.txt
+    │   │   │   │   ├── From Epsilon to Unity Matrix Conjug.txt
+    │   │   │   │   ├── I Built a Banking System That Talks COBOL…
+    │   │   │   │   ├── I Built a Banking System That Talks COBOl.txt
+    │   │   │   │   ├── King EZE NSIGGI PROTOCOL How I Fought for OUR Human Rights.txt
+    │   │   │   │   ├── MMUKO NSIGGI LOGIN INFROMAL DUAL LOGIN MODE.txt
+    │   │   │   │   ├── NSIGII BiPolar Sequence via Bipartie Order and Chaos.txt
+    │   │   │   │   ├── NSIGII Encoding Suffering into Silicon Filter and Flash Sequence.txt
+    │   │   │   │   ├── NSIGII HERE AND NOW COMMAND AND CON.txt
+    │   │   │   │   ├── NSIGII LoopBack LR Polar On the Fly Proccesing LoopBack Addressing.txt
+    │   │   │   │   ├── NSIGII On the Fly Command and Control Sequence via RWX Verification.txt
+    │   │   │   │   ├── NSIGII Spring Physics Echo Verifier.txt
+    │   │   │   │   ├── NSIGII Spring Verify on the Chalk Board.txt
+    │   │   │   │   ├── NSIGII Trident Command & Control Human Rights Verification System.psc.txt
+    │   │   │   │   ├── NSIGII Trident Command & Control Human Rights Verification System.txt
+    │   │   │   │   ├── OHA IWU LAMBDA LAPIS CALCUS.txt
+    │   │   │   │   ├── RectorialReasoningRationalWheelFramework_11FEBURARY_2026.txt
+    │   │   │   │   ├── SymbolicIntreprationAICliiperDebugableCognition_9FEB2026.txt
+    │   │   │   │   ├── Three Player Chess Why does my compute keep on.txt
+    │   │   │   │   ├── What is a Probing System and How does it Work.txt
+    │   │   │   │   ├── WheelRRF 11FEB2026.txt
+    │   │   │   │   └── trident hetrogenous homogenous canicoal interpreter lexer problem keyboard sequence.txt
+    │   │   │   ├── images
+    │   │   │   │   ├── OBINexusNnamdi.png
+    │   │   │   │   ├── crypto_std.jpg
+    │   │   │   │   ├── favicon.png
+    │   │   │   │   ├── rift_bytecode.webp
+    │   │   │   │   ├── rift_flow.png
+    │   │   │   │   ├── rift_raf.png
+    │   │   │   │   └── rift_stage-N.png
+    │   │   │   ├── sdlc
+    │   │   │   │   ├── Aegis.pdf
+    │   │   │   │   ├── Automaton State Minimization and AST Optimization.pdf
+    │   │   │   │   ├── Cryptographic_Standard_V1_0.pdf
+    │   │   │   │   ├── Dimensional_Game_Theory.pdf
+    │   │   │   │   ├── Enhanced Chapter 6_ Git-RAF Integration.pdf
+    │   │   │   │   ├── Extended Automaton-AST Minimization and Validation.pdf
+    │   │   │   │   ├── Formal Proof of Zzero-Knowledge Protocol.pdf
+    │   │   │   │   ├── Formal_Mathemitical_Reasoning_System (1).pdf
+    │   │   │   │   ├── Gossip Language Governance Layer.pdf
+    │   │   │   │   ├── Isomorphic_Reduction__Not_a_Bug__But_a_Feature.pdf
+    │   │   │   │   ├── Mathematical_Framework_for_Zero_Overhead_Data_Marshalling.pdf
+    │   │   │   │   ├── RIFT Import Enforcement Guide.pdf
+    │   │   │   │   ├── RIFT-7 Secure Hardware Deployment Layer.pdf
+    │   │   │   │   ├── RIFT-Bridge Governance Relay Interface.pdf
+    │   │   │   │   ├── State Machine Minization - An Application Based Case Study  on Tennis.pdf
+    │   │   │   │   ├── Telemetry Debugging via GUID and Timestamp Integration.pdf
+    │   │   │   │   ├── Thread Safety Implementation in Gosilang - A Formal Analysis (1).pdf
+    │   │   │   │   ├── TransformingProgrammingLanguage.pdf
+    │   │   │   │   ├── Variadic Strategy in Multi-Dimensional Context.pdf
+    │   │   │   │   └── sinphase_documentation.pdf
+    │   │   │   └── specification
+    │   │   │       ├── $r8rf64o.md
+    │   │   │       ├── $rcu90ow.md
+    │   │   │       ├── $rng7ua6.md
+    │   │   │       ├── Quantum_Superposition.md
+    │   │   │       ├── contextual swiichting.md
+    │   │   │       ├── memory_self_role_mask.md
+    │   │   │       ├── readme.md
+    │   │   │       ├── readme2.md
+    │   │   │       ├── rift-documentation-build.md
+    │   │   │       ├── rift-token-spec.md
+    │   │   │       ├── rift_goverance_file.md
+    │   │   │       ├── riftlang_with_quantum_governnce.md
+    │   │   │       └── rifttoken_model.md
+    │   │   ├── examples
+    │   │   │   ├── hello.rf
+    │   │   │   └── hello.rift
+    │   │   ├── include
+    │   │   │   └── rift_pipeline.h
+    │   │   ├── main.c
+    │   │   ├── nsigii-codec
+    │   │   │   ├── nsigii_codec.c
+    │   │   │   └── nsigii_codec.h
+    │   │   ├── rift-000
+    │   │   │   └── rift_000_tokenizer.c
+    │   │   ├── rift-001
+    │   │   │   └── rift_001_process.c
+    │   │   ├── rift-333
+    │   │   │   └── rift_333_ast.c
+    │   │   ├── rift-444
+    │   │   │   └── rift_444_target.c
+    │   │   ├── rift-555
+    │   │   │   ├── RiftBridge.cs
+    │   │   │   ├── rift_555_bridge.c
+    │   │   │   ├── rift_555_bridge.h
+    │   │   │   └── rift_555_bridge_cpp.cpp
+    │   │   ├── rift2
+    │   │   ├── stages
+    │   │   │   ├── stage-0-tokenizer
+    │   │   │   │   ├── $rcu90ow.md
+    │   │   │   │   ├── $rcu90ow_1.md
+    │   │   │   │   ├── $rcu90ow_2.md
+    │   │   │   │   ├── $rcu90ow_3.md
+    │   │   │   │   ├── $rcu90ow_4.md
+    │   │   │   │   ├── $rng7ua6.md
+    │   │   │   │   ├── $rng7ua6_1.md
+    │   │   │   │   ├── $rng7ua6_2.md
+    │   │   │   │   ├── $rng7ua6_3.md
+    │   │   │   │   ├── $rng7ua6_4.md
+    │   │   │   │   ├── Quantum_Superposition.md
+    │   │   │   │   ├── Quatum_Superposition.md
+    │   │   │   │   ├── Quatum_Superposition_1.md
+    │   │   │   │   ├── Quatum_Superposition_2.md
+    │   │   │   │   ├── Quatum_Superposition_3.md
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── README_1.md
+    │   │   │   │   ├── README_2.md
+    │   │   │   │   ├── README_3.md
+    │   │   │   │   ├── RIFT Stage 0 Tokenization System_ Complete Implementation Plan.pdf
+    │   │   │   │   ├── RIFT Stage 0 Tokenization System_ Complete Implementation Plan_1.pdf
+    │   │   │   │   ├── RIFT-0 Tokenizer Header Files_ Clean Structure for AEGIS Framework Compatibility.pdf
+    │   │   │   │   ├── SUMMARY.md
+    │   │   │   │   ├── TODO.md
+    │   │   │   │   ├── TODO_1.md
+    │   │   │   │   ├── TODO_2.md
+    │   │   │   │   ├── Unicode_Only_Structural_Charset_Normalizer.md
+    │   │   │   │   ├── contextual swiichting.md
+    │   │   │   │   ├── contextual swiichting_1.md
+    │   │   │   │   ├── contextual swiichting_2.md
+    │   │   │   │   ├── contextual swiichting_3.md
+    │   │   │   │   ├── contextual swiichting_4.md
+    │   │   │   │   ├── examples
+    │   │   │   │   │   └── README.md
+    │   │   │   │   ├── hotwiring_architecture.md
+    │   │   │   │   ├── implementation
+    │   │   │   │   │   └── README.md
+    │   │   │   │   ├── memory_self_role_mask.md
+    │   │   │   │   ├── memory_self_role_mask_1.md
+    │   │   │   │   ├── memory_self_role_mask_2.md
+    │   │   │   │   ├── memory_self_role_mask_3.md
+    │   │   │   │   ├── memory_self_role_mask_4.md
+    │   │   │   │   ├── readme_4.md
+    │   │   │   │   ├── rift token architecture_ memory-type associations.pdf
+    │   │   │   │   ├── rift token architecture_ memory-type associations_1.pdf
+    │   │   │   │   ├── rift token architecture_ memory-type associations_2.pdf
+    │   │   │   │   ├── rift token architecture_ memory-type associations_3.pdf
+    │   │   │   │   ├── rift token architecture_ memory-type associations_4.pdf
+    │   │   │   │   ├── rift-governance-model.md
+    │   │   │   │   ├── rift-token-spec.md
+    │   │   │   │   ├── rift-token-spec_1.md
+    │   │   │   │   ├── rift-token-spec_2.md
+    │   │   │   │   ├── rift-token-spec_3.md
+    │   │   │   │   ├── rift-token-spec_4.md
+    │   │   │   │   ├── rifter_principles.md
+    │   │   │   │   ├── rifter_principles_1.md
+    │   │   │   │   ├── riftlang self-governing driver & binding specification.md
+    │   │   │   │   ├── riftlang self-governing driver & binding specification_1.md
+    │   │   │   │   ├── riftlang self-governing driver & binding specification_2.md
+    │   │   │   │   ├── riftlang self-governing driver & binding specification_3.md
+    │   │   │   │   ├── riftlang self-governing driver & binding specification_4.md
+    │   │   │   │   ├── riftlang token specification_ classical and quantum governance.pdf
+    │   │   │   │   ├── riftlang_lexer_specification.md
+    │   │   │   │   ├── riftlang_lexer_specification_1.md
+    │   │   │   │   ├── riftlang_lexer_specification_2.md
+    │   │   │   │   ├── riftlang_lexer_specification_3.md
+    │   │   │   │   ├── riftlang_lexer_specification_4.md
+    │   │   │   │   ├── rifttoken_model.md
+    │   │   │   │   ├── rifttoken_model_1.md
+    │   │   │   │   ├── rifttoken_model_2.md
+    │   │   │   │   ├── rifttoken_model_3.md
+    │   │   │   │   ├── rifttoken_model_4.md
+    │   │   │   │   └── specifications
+    │   │   │   │       └── README.md
+    │   │   │   ├── stage-1-parser
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── README_1.md
+    │   │   │   │   ├── examples
+    │   │   │   │   │   └── README.md
+    │   │   │   │   ├── formal languages and grammar types.pdf
+    │   │   │   │   ├── formal-languages-grammar-types.md
+    │   │   │   │   ├── implementation
+    │   │   │   │   │   └── README.md
+    │   │   │   │   ├── import-enforcement-guide.md
+    │   │   │   │   ├── readme2.md
+    │   │   │   │   ├── readme2_1.md
+    │   │   │   │   ├── readme2_2.md
+    │   │   │   │   ├── readme2_3.md
+    │   │   │   │   ├── readme2_4.md
+    │   │   │   │   └── specifications
+    │   │   │   │       └── README.md
+    │   │   │   ├── stage-2-ast
+    │   │   │   │   ├── Base Shift Allocator.pdf
+    │   │   │   │   ├── README_2.md
+    │   │   │   │   ├── implementation
+    │   │   │   │   │   └── README.md
+    │   │   │   │   └── implementation_strategy.md
+    │   │   │   ├── stage-3-validator
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── README_1.md
+    │   │   │   │   ├── README_2.md
+    │   │   │   │   ├── README_3.md
+    │   │   │   │   ├── ZERO_KNOWLEDGE_PROOF.md
+    │   │   │   │   ├── ZERO_KNOWLEDGE_PROOF_1.md
+    │   │   │   │   ├── building_belief_into_code.md
+    │   │   │   │   ├── building_belief_into_code_1.md
+    │   │   │   │   ├── building_belief_into_code_2.md
+    │   │   │   │   ├── building_belief_into_code_3.md
+    │   │   │   │   ├── building_belief_into_code_4.md
+    │   │   │   │   ├── compass_artifact_wf-c3fa578c-245d-4e4a-8a07-aed1cfd656d6_text_markdown.md
+    │   │   │   │   ├── directory_for_riftlang_ugly_as_.md
+    │   │   │   │   ├── directory_for_riftlang_ugly_as__1.md
+    │   │   │   │   ├── directory_for_riftlang_ugly_as__2.md
+    │   │   │   │   ├── directory_for_riftlang_ugly_as__3.md
+    │   │   │   │   ├── directory_for_riftlang_ugly_as__4.md
+    │   │   │   │   ├── examples
+    │   │   │   │   │   └── README.md
+    │   │   │   │   ├── implementation
+    │   │   │   │   │   └── README.md
+    │   │   │   │   ├── rift-7-hardware-deployment.md
+    │   │   │   │   ├── rift-bridge-governance-relay.md
+    │   │   │   │   ├── rift_goverance_file.md
+    │   │   │   │   ├── rift_goverance_file_1.md
+    │   │   │   │   ├── rift_goverance_file_2.md
+    │   │   │   │   ├── rift_goverance_file_3.md
+    │   │   │   │   ├── rift_goverance_file_4.md
+    │   │   │   │   ├── riftmemory_alignment.md
+    │   │   │   │   ├── specifications
+    │   │   │   │   │   └── README.md
+    │   │   │   │   ├── the rifters way - language intergirty for human-centric safety-critcial system.md
+    │   │   │   │   ├── the rifters way - language intergirty for human-centric safety-critcial system_1.md
+    │   │   │   │   └── the rifters way - language intergirty for human-centric safety-critcial system_2.md
+    │   │   │   ├── stage-4-bytecode
+    │   │   │   │   ├── $r8io2l9.md
+    │   │   │   │   ├── $r8io2l9_1.md
+    │   │   │   │   ├── $r8io2l9_2.md
+    │   │   │   │   ├── $r8io2l9_3.md
+    │   │   │   │   ├── $r8io2l9_4.md
+    │   │   │   │   ├── $r8rf64o.md
+    │   │   │   │   ├── $r8rf64o_1.md
+    │   │   │   │   ├── $r8rf64o_2.md
+    │   │   │   │   ├── $r8rf64o_3.md
+    │   │   │   │   ├── $r8rf64o_4.md
+    │   │   │   │   ├── Dimensional_Game_Theory.md
+    │   │   │   │   ├── FORMAL AUTOMATON MODEL FOR REGEX IN PROGRAMMING LANGUAGE DESIGN.pdf
+    │   │   │   │   ├── FORMAL AUTOMATON MODEL FOR REGEX IN PROGRAMMING LANGUAGE DESIGN_1.pdf
+    │   │   │   │   ├── FORMAL AUTOMATON MODEL FOR REGEX IN PROGRAMMING LANGUAGE DESIGN_2.pdf
+    │   │   │   │   ├── Formal_Analysis_of_Game_Theory_for_Algorithm.md
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── README_1.md
+    │   │   │   │   ├── README_2.md
+    │   │   │   │   ├── README_3.md
+    │   │   │   │   ├── RIFT_Integration_Standard_v4.0.0.md
+    │   │   │   │   ├── State Machine Optimization in Tennis Score Tracking.md
+    │   │   │   │   ├── Varidaic_Strategy.md
+    │   │   │   │   ├── enhanced_chapter_6.md
+    │   │   │   │   ├── examples
+    │   │   │   │   │   └── README.md
+    │   │   │   │   ├── hotwiring_overview.md
+    │   │   │   │   ├── implementation
+    │   │   │   │   │   └── README.md
+    │   │   │   │   ├── incremental_edit_loop.md
+    │   │   │   │   ├── memory as governance contract.md
+    │   │   │   │   ├── repo_structure.md
+    │   │   │   │   ├── rift-documentation-build.md
+    │   │   │   │   ├── rift-documentation-build_1.md
+    │   │   │   │   ├── rift-documentation-build_2.md
+    │   │   │   │   ├── rift-documentation-build_3.md
+    │   │   │   │   ├── rift-documentation-build_4.md
+    │   │   │   │   ├── specifications
+    │   │   │   │   │   └── README.md
+    │   │   │   │   ├── the rifters way - language intergirty for human-centric safety-critcial system.pdf
+    │   │   │   │   ├── the rifters way - language intergirty for human-centric safety-critcial system_1.pdf
+    │   │   │   │   ├── the rifters way - language intergirty for human-centric safety-critcial system_2.pdf
+    │   │   │   │   ├── the rifters way - language intergirty for human-centric safety-critcial system_3.pdf
+    │   │   │   │   └── the rifters way - language intergirty for human-centric safety-critcial system_4.pdf
+    │   │   │   ├── stage-5-verifier
+    │   │   │   │   ├── Formal Proof of Zzero-Knowledge Protocol.pdf
+    │   │   │   │   ├── Formal Proof of Zzero-Knowledge Protocol_1.pdf
+    │   │   │   │   ├── Formal Proof of Zzero-Knowledge Protocol_2.pdf
+    │   │   │   │   ├── README.md
+    │   │   │   │   ├── examples
+    │   │   │   │   │   └── README.md
+    │   │   │   │   ├── implementation
+    │   │   │   │   │   └── README.md
+    │   │   │   │   └── specifications
+    │   │   │   │       └── README.md
+    │   │   │   └── stage-6-emitter
+    │   │   │       ├── Formal_Mathemitical_Reasoning_System (1).pdf
+    │   │   │       ├── Formal_Mathemitical_Reasoning_System (1)_1.pdf
+    │   │   │       ├── Formal_Mathemitical_Reasoning_System.pdf
+    │   │   │       ├── README.md
+    │   │   │       ├── README_1.md
+    │   │   │       ├── examples
+    │   │   │       │   └── README.md
+    │   │   │       ├── implementation
+    │   │   │       │   └── README.md
+    │   │   │       └── specifications
+    │   │   │           └── README.md
+    │   │   └── tests
+    │   │       └── test_rift.c
+    │   └── riftbridge
+    │       ├── README.md
+    │       ├── README2.md
+    │       ├── RIFT is  a Flexible Translator.png
+    │       ├── r_open
+    │       │   ├── LICENSE
+    │       │   │   ├── DUAL_NT
+    │       │   │   │   ├── DUAL_NT_LICENSE.html
+    │       │   │   │   ├── OPENACESS_NT.LICENSE.md
+    │       │   │   │   └── OPENSENSE_NT.LICENSE.md
+    │       │   │   ├── references
+    │       │   │   │   ├── OBINexus 5Year Milestone Initiative for Civil Collapse Mitigation.pdf
+    │       │   │   │   ├── OBINexus Business Model Analysis_ 1-3-5 Year Strategic Roadmap.pdf
+    │       │   │   │   ├── OBINexus Constitutional Business Framework - Complete Technical Documentation.pdf
+    │       │   │   │   └── OBINexus IWU Governance Definitions.pdf
+    │       │   │   └── specification
+    │       │   │       ├── README.md
+    │       │   │       ├── iwu-governance-definitions.md
+    │       │   │       ├── obinexus_business_model.md
+    │       │   │       └── obinexus_complete_framework (4).md
+    │       │   ├── LICENSE.md
+    │       │   ├── README.md
+    │       │   ├── build.sh
+    │       │   ├── librift_open.a
+    │       │   ├── librift_open.so
+    │       │   ├── rift.jpg
+    │       │   ├── rift_open.dll
+    │       │   ├── ropen.c
+    │       │   ├── ropen.cd
+    │       │   ├── ropen.dll
+    │       │   ├── ropen.exe
+    │       │   └── run.sh
+    │       ├── r_pkg
+    │       │   ├── R_open.md
+    │       │   ├── R_open.pdf
+    │       │   ├── main.c
+    │       │   ├── main.cpp
+    │       │   └── main.csharp
+    │       ├── rift
+    │       │   ├── README.md
+    │       │   ├── RIFT Deployment README.pdf
+    │       │   ├── docs
+    │       │   │   ├── RIFT Tomography C-Family Implementation.md
+    │       │   │   └── rift_tomography_guide.md
+    │       │   ├── quickstart.sh
+    │       │   └── rift_build.sh
+    │       ├── rift_pkg
+    │       │   ├── DISCLAIMER.md
+    │       │   ├── README.md
+    │       │   ├── build
+    │       │   │   ├── Makefile.txt
+    │       │   │   └── build.sh
+    │       │   ├── include
+    │       │   │   └── rift
+    │       │   │       ├── rift.h
+    │       │   │       ├── riftbridge.h
+    │       │   │       └── riftest.h
+    │       │   ├── src
+    │       │   │   ├── core
+    │       │   │   │   ├── eze_trident.c
+    │       │   │   │   └── main.c
+    │       │   │   └── trident
+    │       │   │       ├── riftbridge.c
+    │       │   │       └── trident.c
+    │       │   └── tests
+    │       │       └── test_integration.c
+    │       ├── rift_tomography
+    │       │   ├── README.md
+    │       │   ├── blogs
+    │       │   │   └── SemVerX is Here – The First Working.md
+    │       │   ├── build
+    │       │   │   └── build.sh
+    │       │   ├── include
+    │       │   │   ├── riftbridge.h
+    │       │   │   └── trident.h
+    │       │   └── src
+    │       │       ├── c
+    │       │       │   └── trident.c
+    │       │       ├── cpp
+    │       │       │   └── TridentResolver.cpp
+    │       │       ├── csharp
+    │       │       │   └── RIFTTomography.c
+    │       │       └── trident.c
+    │       └── riftbridge_cfamily
+    │           ├── build
+    │           │   └── build.sh
+    │           ├── include
+    │           │   ├── rift.h
+    │           │   ├── riftbridge.h
+    │           │   └── rifttest.h
+    │           ├── src
+    │           │   ├── main.c
+    │           │   ├── rift.c
+    │           │   ├── riftbridge.c
+    │           │   └── riftest.c
+    │           └── test
+    │               ├── main.cpp
+    │               ├── main.cs
+    │               └── main.csharp
+    ├── rift.csproj
+    ├── riftbridge.cs
+    └── riftlang
+        ├── Makefile
+        ├── README.md
+        ├── RIFTlang Codex.md
+        ├── Symbol RIFT Engine DAG.svg
+        ├── Symbolic DAG Version 2.png
+        ├── Symbolic DAG.png
+        ├── Symbolic Inteprator.pdf
+        ├── TRANSCRIPT
+        │   ├── BCI
+        │   │   ├── Dimensional Game Theory By Nnamdin.zip
+        │   │   ├── Dimensional Game Theory_ From Chess to Unicode.zip
+        │   │   ├── Neurospark BCI  via 7x7.txt
+        │   │   ├── Pre-conscious BCI Plasma Cohernce adn aNTI OHERION.TXT
+        │   │   └── quantum classic firld reosluton for plasmio with lgithin ball.txt
+        │   ├── Be free NOW  Butterflies on the Battlefield – A Phenomenological Realignment  of the Heart and SOUL
+        │   │   └── Be free NOW.docx
+        │   ├── Bidirecional Learning
+        │   │   ├── OBINexus Constutional Updates Pandora Box Healing Begin NOW
+        │   │   │   ├── OBINexus Constutional Updates Pandora Box Healing Begin NOW.docx
+        │   │   │   ├── OBINexus Constutional Updates Pandora Box Healing Begin NOW.pdf
+        │   │   │   ├── OBINexus Constutional Updates Pandora Box Healing Begin NOW.srt
+        │   │   │   └── OBINexus Constutional Updates Pandora Box Healing Begin NOW.txt
+        │   │   └── OBINexus Constutional Updates Pandora Box Healing Begin NOW.zip
+        │   ├── GEOCALL 18 NOV
+        │   │   ├── Geo Call_otter_ai.txt
+        │   │   └── gocall 2_otter_ai.txt
+        │   ├── GossipLang
+        │   │   ├── Gossip Programing16 NOV 2025 AD by Nnamdi Michael Okpala
+        │   │   │   ├── Gossip Programing16 NOV 2025 AD by Nnamdi Michael Okpala.pdf
+        │   │   │   ├── Gossip Programing16 NOV 2025 AD by Nnamdi Michael Okpala.srt
+        │   │   │   ├── Gossip Programing16 NOV 2025 AD by Nnamdi Michael Okpala.txt
+        │   │   │   └── Gossip Programing16 NOV 2025 AD by Nnamdi Michael Okpala.vtt
+        │   │   ├── Gossip Programing16 NOV 2025 AD by Nnamdi Michael Okpala.zip
+        │   │   ├── Ontological Baysian Quatum Superpositve State Isotolpic
+        │   │   │   ├── Ontological Baysian Quatum Superpositve State Isotolpic.pdf
+        │   │   │   ├── Ontological Baysian Quatum Superpositve State Isotolpic.txt
+        │   │   │   └── Ontological Baysian Quatum Superpositve State Isotolpic.vtt
+        │   │   ├── Ontological Baysian Quatum Superpositve State Isotolpic.zip
+        │   │   ├── PHILOSOPHY_FOR_ANTIBURACTS.txt
+        │   │   └── gosilang_with_rift_16nov2025.txt
+        │   ├── MAIN
+        │   │   ├── 09DEC2025SPEECHNOTE_TOMOGRAPHCITWSGINFORSPACE.txt
+        │   │   ├── 1.webp
+        │   │   ├── 10hourly.txt
+        │   │   ├── 2.webp
+        │   │   ├── 3.webp
+        │   │   ├── 4.webp
+        │   │   ├── 5.webp
+        │   │   ├── 6.webp
+        │   │   ├── Annoncing Bidirectional Learning Thank you Mr Salim 14 NOV 2025.txt
+        │   │   ├── BEINGTOBECOMING_27OV2025.txt
+        │   │   ├── BiDirection Interperator for NeroDivegenct AntiHallicution Safety Critic l srt 10 nov 2025 .txt
+        │   │   ├── BiDirection Interperator for NeroDivegenct AntiHallicution Safety Critical - Copy.txt
+        │   │   ├── BiDirection Interperator for NeroDivegenct AntiHallicution Safety Critical.srt
+        │   │   ├── Bidirectioanl Learning Framwork with QA bounds_otter_ai.txt
+        │   │   ├── Biological Informatics Presentation_otter_ai.txt
+        │   │   ├── CORN.txt
+        │   │   ├── Civil Uprising - When X Fails, Buil.txt
+        │   │   ├── Data Request and Case Closure_otter_ai.txt
+        │   │   ├── Dimensional Game Theory By Nnamdin.txt
+        │   │   ├── EURODI~1.TXT
+        │   │   ├── Export subtitles - NSIGII Here and Now and OBINexus 27 Degree of Dimensionality Consensus Relaity.wav (28_01_2026).srt
+        │   │   ├── Export text - Fan Fiction Ferb Universe and Marvel Tony Universe.wav (04_11_2025).txt
+        │   │   ├── Export text - Mmuko Suite NOV 11 2025.wav (11_11_2025).txt
+        │   │   ├── Export text - NSIGII Here and Now and OBINexus 27 Degree of Dimensionality Consensus Relaity.wav (28_01_2026).txt
+        │   │   ├── Frnakwis mosnter_otter_ai.txt
+        │   │   ├── Geo Call_otter_ai.txt
+        │   │   ├── Gossip Programing16 NOV 2025 AD by Nnamdi Michael Okpala.txt
+        │   │   ├── Governce with Biologiy Sustianbelity _otter_ai (1).txt
+        │   │   ├── Governce with Biologiy Sustianbelity _otter_ai.txt
+        │   │   ├── Govvernce Modle via OBINexus_otter_ai (1).txt
+        │   │   ├── Govvernce Modle via OBINexus_otter_ai.txt
+        │   │   ├── Human Rights Claim 2014 - Nnamdi Michael Okpala 2014 VIOLATION 360 M.txt
+        │   │   ├── Introduuion to DGT incompelte todya 13 nov 2025.txt
+        │   │   ├── LIVE FIRST WORK NEXT.txt
+        │   │   ├── MMUKOOS_D_13T__DEC12_LEAPY2__
+        │   │   │   ├── Export text - Mmuko Suite NOV 11 2025.wav (11_11_2025) (1).txt
+        │   │   │   ├── MMUKO.txt
+        │   │   │   ├── Mmuko PhantomID_otter _15_NOV_2025.txt
+        │   │   │   ├── Mmuko_otter_ai (1).txt
+        │   │   │   └── mmuko_otter_ai.txt
+        │   │   ├── Mmuko PhantomID_otter _15_NOV_2025.txt
+        │   │   ├── Neurospark BCI  via 7x7.txt
+        │   │   ├── Neurospark brain computing interface via 7x7 Matrix for Kimentic and Inverse Kime ntic Verb Noun DAG 30 OCT 2025.txt
+        │   │   ├── Newham LUCC Buffer Overflow for Automous Script via Mail Discolure post of money.txt
+        │   │   ├── OBINexus Constutional Updates Pandora Box Healing Begin NOW.docx
+        │   │   ├── OBINexus Constutional Updates Pandora Box Healing Begin NOW.pdf
+        │   │   ├── OBINexus Constutional Updates Pandora Box Healing Begin NOW.srt
+        │   │   ├── OBINexus Constutional Updates Pandora Box Healing Begin NOW.txt
+        │   │   ├── OBINexus_MY_RETURNTOOBI_27NOV2025TRANSCENDING_OPERATION_ALINEOFCODEATATIME.txt
+        │   │   ├── OCT102025_1733_2025_OPENSENORYSTILL.txt
+        │   │   ├── ODTS.txt
+        │   │   ├── ONION ROTUER 2 corn.txt
+        │   │   ├── ONION_otter_ai.txt
+        │   │   ├── Ontological Baysian Quatum Superpositve State Isotolpic.txt
+        │   │   ├── PHILOSOPHY_FOR_ANTIBURACTS.txt
+        │   │   ├── Pandoras Box FanFiction by Nnamdi Michael Okpala.txt
+        │   │   ├── Quatum-Classical fo r PHEBIT lIGTHIN BALL.txt
+        │   │   ├── README.txt
+        │   │   ├── SPARSETOMOGRPHICFORRIFTEST09DEC2025.txt
+        │   │   ├── SPECHNOTESOPENSENSESTILL10DEC2025.txt
+        │   │   ├── Spiritual Anchor Initiative_otter_ai.txt
+        │   │   ├── TRANSCRIPT-STREAM-OF-CONSIONESS.txt
+        │   │   ├── The Rebirth fo OBInexus.txt
+        │   │   ├── The World First Constutional Use of the AURASEAL on obinexus github 7 NOV 2025.txt
+        │   │   ├── bci.txt
+        │   │   ├── captions.srt
+        │   │   ├── captions.txt
+        │   │   ├── dse.txt
+        │   │   ├── gocall 2_otter_ai.txt
+        │   │   ├── gosilang_with_rift_16nov2025.txt
+        │   │   ├── hum_otter_ai.txt
+        │   │   ├── nigerian imposed wiht  biafra.txt
+        │   │   ├── obinxus_biz.txt
+        │   │   ├── persona devloepmntn 04 nov 2025.txt
+        │   │   ├── persona devloepmntn 04 nov 2025_otter_ai.txt
+        │   │   ├── quantum classic firld reosluton for plasmio with lgithin ball.txt
+        │   │   ├── rift222.txt
+        │   │   ├── spasdetime.txt
+        │   │   ├── zero knoeldge proof system .txt
+        │   │   └── zz.txt
+        │   ├── Mmuko Suites
+        │   │   ├── Export text - Mmuko Suite NOV 11 2025.wav (11_11_2025) (1).txt
+        │   │   ├── Mmuko PhantomID_otter _15_NOV_2025.txt
+        │   │   ├── Mmuko_otter_ai (1).txt
+        │   │   └── mmuko_otter_ai.txt
+        │   ├── ONION Governaance
+        │   │   ├── CORN.txt
+        │   │   ├── ONION ROTUER 2 corn.txt
+        │   │   └── ONION_otter_ai.txt
+        │   ├── SEALED 17 NOV
+        │   │   ├── Authetnic Expression.png
+        │   │   ├── BiDirection Interperator for NeroDivegenct AntiHallicution Safety Critical - Copy.srt
+        │   │   ├── BiDirection Interperator for NeroDivegenct AntiHallicution Safety Critical - Copy.txt
+        │   │   ├── Data Request and Case Closure_otter_ai.txt
+        │   │   ├── Export text - Mmuko Suite NOV 11 2025.wav (11_11_2025).txt
+        │   │   ├── Mmuko PhantomID_otter _15_NOV_2025.txt
+        │   │   └── captions.srt
+        │   ├── auraseal
+        │   │   └── Auraseal1nov0205 youtbe vido palyet trancitp.txt
+        │   ├── decentriezed networkign
+        │   │   ├── 1.webp
+        │   │   ├── 2.webp
+        │   │   ├── 3.webp
+        │   │   ├── 4.webp
+        │   │   ├── 5.webp
+        │   │   └── 6.webp
+        │   ├── dimensional-game-theory
+        │   │   ├── BiDirection Interperator for NeroDivegenct AntiHallicution Safety Critical - Copy (1).srt
+        │   │   ├── Dimensional Game Theory By Nnamdin
+        │   │   │   ├── Dimensional Game Theory By Nnamdin.srt
+        │   │   │   └── Dimensional Game Theory By Nnamdin.txt
+        │   │   ├── Dimensional Game Theory By Nnamdin.csv
+        │   │   ├── Dimensional Game Theory By Nnamdin.docx
+        │   │   ├── Dimensional Game Theory By Nnamdin.pdf
+        │   │   ├── Dimensional Game Theory By Nnamdin.srt
+        │   │   ├── Dimensional Game Theory By Nnamdin.txt
+        │   │   ├── Dimensional Game Theory By Nnamdin.vtt
+        │   │   ├── Dimensional Game Theory By Nnamdin.zip
+        │   │   └── Introduuion to DGT incompelte todya 13 nov 2025.txt
+        │   ├── human-rights-social
+        │   │   └── Human Rights Claim 2014 - Nnamdi Michael Okpala 2014 VIOLATION 360 M.txt
+        │   ├── jagganut
+        │   │   └── Biological Informatics Presentation_otter_ai.txt
+        │   ├── nov-17-2025-obinexus-reform
+        │   │   ├── Bidirectioanl Learning Framwork with QA bounds_otter_ai.txt
+        │   │   ├── Governce with Biologiy Sustianbelity _otter_ai (1).txt
+        │   │   ├── Governce with Biologiy Sustianbelity _otter_ai.txt
+        │   │   ├── Govvernce Modle via OBINexus_otter_ai (1).txt
+        │   │   └── Govvernce Modle via OBINexus_otter_ai.txt
+        │   ├── postgrade
+        │   │   ├── Frnakwis mosnter_otter_ai.txt
+        │   │   └── TRANSCRIPT-STREAM-OF-CONSIONESS.txt
+        │   └── spirit-anchor-and-masquarade-16NOV2025
+        │       └── Spiritual Anchor Initiative_otter_ai.txt
+        ├── bin
+        │   ├── libriftlang.a
+        │   ├── libriftlang.dll
+        │   ├── libriftlang.so
+        │   ├── riftlang
+        │   └── riftlang.exe
+        ├── bindings
+        │   ├── criftlang
+        │   │   ├── rift_binding.c
+        │   │   └── rift_binding.h
+        │   ├── go-riftlang
+        │   │   ├── pattern_engine.go
+        │   │   └── rift_binding.go
+        │   ├── lua-riftlang
+        │   │   ├── pattern_engine.lua
+        │   │   └── rift_binding.lua
+        │   ├── node-riftlang
+        │   │   ├── pattern_engine.cjs
+        │   │   └── rift_binding.cjs
+        │   ├── pyriftlang
+        │   │   ├── __pycache__
+        │   │   │   ├── rift_binding.cpython-312.pyc
+        │   │   │   └── rift_binding.cpython-313.pyc
+        │   │   ├── pattern_engine.py
+        │   │   └── rift_binding.py
+        │   └── wat2wasm
+        │       ├── rift_binding.wasm
+        │       └── rift_binding.wat
+        ├── build
+        │   ├── main.o
+        │   ├── rift_codec.o
+        │   └── riftlang.o
+        ├── docs
+        │   ├── marked-down
+        │   │   ├── $r8rf64o.md
+        │   │   ├── $rcu90ow.md
+        │   │   ├── $rng7ua6.md
+        │   │   ├── Quatum_Superposition.md
+        │   │   ├── building_belief_into_code.md
+        │   │   ├── contextual swiichting.md
+        │   │   ├── gossip-language-governance.md
+        │   │   ├── import-enforcement-guide.md
+        │   │   ├── memory_self_role_mask.md
+        │   │   ├── readme.md
+        │   │   ├── readme2.md
+        │   │   ├── rift-7-hardware-deployment.md
+        │   │   ├── rift-bridge-governance-relay.md
+        │   │   ├── rift-documentation-build.md
+        │   │   ├── rift-token-spec.md
+        │   │   ├── rift_goverance_file.md
+        │   │   ├── riftlang_lexer_specification.md
+        │   │   ├── riftlang_with_quantum_governnce.md
+        │   │   ├── rifttoken_model.md
+        │   │   ├── specification_classic.md
+        │   │   └── the rifters way - language intergirty for human-centric safety-critcial system.md
+        │   └── specification
+        │       ├── $r2lqwin.pdf
+        │       ├── $rxd9ode.pdf
+        │       ├── FORMAL AUTOMATON MODEL FOR REGEX IN PROGRAMMING LANGUAGE DESIGN.pdf
+        │       ├── Thread Safety Implementation in Gosilang - A Formal Analysis (1).pdf
+        │       ├── building_belief_into_code.pdf
+        │       ├── contextual swiichting.pdf
+        │       ├── governing meaning_ the rift architecture of certainty - copy.pdf
+        │       ├── memory_self_role_mask.pdf
+        │       ├── readme.pdf
+        │       ├── readme2.pdf
+        │       ├── rift token architecture_ memory-type associations.pdf
+        │       ├── rifter_ecosystem_whitepaper (8) - copy.pdf
+        │       ├── rifter_ecosystem_whitepaper (8).pdf
+        │       ├── rifter_ecosystem_whitepaper.pdf
+        │       ├── riftlang self-governing driver & binding specification.md
+        │       ├── riftlang self-governing driver & binding specification.pdf
+        │       ├── riftlang_implementation_specification.pdf
+        │       └── technical documentation - memory goveranace in the rift ecosystem.pdf
+        ├── examples
+        │   ├── README.md
+        │   ├── counter
+        │   │   └── counter.rift
+        │   ├── crift
+        │   │   ├── out
+        │   │   │   ├── hello.c
+        │   │   │   ├── hello.lua
+        │   │   │   └── hello.rift
+        │   │   └── src
+        │   │       ├── governance.rift
+        │   │       ├── hello.rift
+        │   │       └── quantum_bridge.rift
+        │   ├── go
+        │   │   ├── out
+        │   │   └── src
+        │   │       ├── governance.rift
+        │   │       ├── quantum_bridge
+        │   │       ├── quantum_bridge.c
+        │   │       └── quantum_bridge.rift
+        │   ├── luarift
+        │   │   ├── out
+        │   │   └── src
+        │   │       ├── governance.rift
+        │   │       └── quantum_bridge.rift
+        │   ├── node-rift
+        │   │   ├── out
+        │   │   └── src
+        │   │       ├── governance.rift
+        │   │       └── quantum_bridge.rift
+        │   ├── pyrift
+        │   │   ├── out
+        │   │   └── src
+        │   │       ├── governance.rift
+        │   │       └── quantum_bridge.rift
+        │   └── wasm
+        │       ├── out
+        │       └── src
+        │           ├── governance.rift
+        │           └── quantum_bridge.rift
+        ├── main.c
+        ├── rift_codec.c
+        ├── rift_codec.h
+        ├── rifters_way
+        │   ├── README.md
+        │   └── RIFT
+        │       ├── Axis Shift Change of Basis.png
+        │       ├── Axis Shift Change of Basis.svg
+        │       ├── Change of Basis.svg
+        │       ├── Complete RIFT Procesing Pipeline.png
+        │       ├── Complete RIFT Procesing Pipeline.svg
+        │       ├── Complete RIFT Processing Pipeline.mermaid
+        │       ├── Dimensional POP OUT.svg
+        │       ├── Dual Encoding & Rift Space.mermaid
+        │       ├── Dual Encoding & Rift Space.svg
+        │       ├── Dual Encoding and Rift Space.mermaid
+        │       ├── Eplision Handling.svg
+        │       ├── Epsilon Handling.png
+        │       ├── Epsilon Resolution.mermaid
+        │       ├── Epsilon Resolution.png
+        │       ├── Epsilon Resolution.svg
+        │       ├── Hexadecimal Reconciliation.mermaid
+        │       ├── Hexadecimal Reconciliation.png
+        │       ├── Hexadecimal Reconciliation.svg
+        │       ├── Identiity Reconcillation.svg
+        │       ├── Identity Reconciliation Function.png
+        │       ├── Identity Reconcillation Function.mermaid
+        │       ├── Identity Reconnaiation.png
+        │       ├── Lifecycle Research MVP Foundation Aspiration.mermaid
+        │       ├── Overall Rift Process.mermaid
+        │       ├── Overall Rift Process.svg
+        │       ├── RIFT Consensual Bound raERA riftest.png
+        │       ├── RIFT Theory Components.png
+        │       ├── RIFT Theory Components.svg
+        │       ├── RIFTCISCO_RWX_13DEC2025_2245
+        │       │   ├── RIFT_RDATAPACKETVIACISOBOUNDHOMOGRUTYDATASAPENANDODTS12DEC2025.txt
+        │       │   ├── deepseek_mermaid_20251213_412b08.mermaid
+        │       │   ├── deepseek_mermaid_20251213_adbf97.png
+        │       │   └── deepseek_mermaid_20251213_dc925d.svg
+        │       ├── Rift Automaton with Dual Transitions.mermaid
+        │       ├── Rift Automaton with Dual Transitions.svg
+        │       ├── Rift Automaton.mermaid
+        │       ├── Rift Automaton.mmd
+        │       ├── Sparse Encoding Structure.mermaid
+        │       ├── Sparse Encoding Structure.png
+        │       ├── Sparse Encoding Structure.svg
+        │       ├── Sparse Encoding.mermaid
+        │       ├── Sparse Enconding.png
+        │       ├── Transformation Set F.png
+        │       ├── Transformation Set F.svg
+        │       ├── Transformation.png
+        │       ├── mmuko_noise_union_nonosie_29dec2025.mermaid
+        │       ├── mmuko_noise_union_nonosie_29dec2025.png
+        │       └── mmuko_noise_union_nonosie_29dec2025.svg
+        ├── riftlang.c
+        └── riftlang.h
+
+195 directories, 975 files
