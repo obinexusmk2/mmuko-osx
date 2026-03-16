@@ -150,6 +150,7 @@ namespace Rift
     /// <summary>
     /// Hex Pattern Matcher using Source Generator compatible attributes
     /// </summary>
+    // RiftPattern is method-level metadata and should annotate the regex factory method only.
     [AttributeUsage(AttributeTargets.Method, AllowMultiple = false)]
     public class RiftPatternAttribute : Attribute
     {
@@ -182,11 +183,8 @@ namespace Rift
     /// <summary>
     /// Hex Pattern Matcher for [A-Z][0-9] patterns
     /// </summary>
-    [RiftPattern("[A-Z][0-9]$")]
     public partial class HexMatcher
     {
-        private static readonly Regex _regex = new Regex(@"([A-Z])([0-9])", RegexOptions.Compiled);
-
         /// <summary>
         /// Captured alpha component
         /// </summary>
@@ -206,7 +204,7 @@ namespace Rift
         /// <returns>True if pattern matched</returns>
         public bool Match(string input)
         {
-            var match = _regex.Match(input);
+            var match = GetHexPattern().Match(input);
             if (match.Success && match.Groups.Count >= 3)
             {
                 Alpha = match.Groups[1].Value[0];
@@ -219,6 +217,7 @@ namespace Rift
         /// <summary>
         /// Static match method
         /// </summary>
+        [RiftPattern("([A-Z])([0-9])$")]
         [GeneratedRegex(@"[A-Z][0-9]$")]
         public static partial Regex GetHexPattern();
     }
