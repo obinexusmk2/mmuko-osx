@@ -16,3 +16,30 @@
 /ui/rift/rift/CTestTestfile.cmake
 /ui/rift/rift/Makefile
 /ui/rift/rift/**/Makefile
+# Canonical build output roots
+artifacts/**
+!artifacts/.gitkeep
+!artifacts/c/.gitkeep
+!artifacts/cpp/.gitkeep
+!artifacts/csharp/.gitkeep
+
+# .NET
+**/bin/
+**/obj/
+
+# CMake
+**/build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CPack*.cmake
+Makefile
+!/Makefile
+
+# Native binaries / objects
+*.o
+*.a
+*.so
+*.dll
+*.exe
+*.bin

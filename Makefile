@@ -46,6 +46,14 @@ INC_DIR     = include
 ASM_DIR     = asm
 UI_DIR      = ui
 BUILD_DIR   = build
+SRC_DIR        = src
+INC_DIR        = include
+ASM_DIR        = asm
+UI_DIR         = ui
+ARTIFACTS_DIR  = artifacts
+C_ARTIFACT_DIR = $(ARTIFACTS_DIR)/c/mmuko-os
+CPP_ARTIFACT_DIR = $(ARTIFACTS_DIR)/cpp/mmuko-os
+CSHARP_ARTIFACT_DIR = $(ARTIFACTS_DIR)/csharp
 
 # Compiler flags
 CFLAGS      = -Wall -Wextra -std=c11 -O2 -I$(INC_DIR)
@@ -85,6 +93,20 @@ CPP_LIB_SO  = $(BUILD_DIR)/libriftbridge_cpp.so
 .PHONY: all clean run debug bootimg riftbridge csharp build-c build-cpp build-csharp build-all test install help
 
 all: build-c
+# Object files
+C_OBJECTS   = $(C_ARTIFACT_DIR)/bootsec.o $(C_ARTIFACT_DIR)/ringboot.o
+CXX_OBJECTS = $(CPP_ARTIFACT_DIR)/riftbridge_cpp.o
+C_UI_OBJ    = $(CPP_ARTIFACT_DIR)/riftbridge_c.o
+
+# Targets
+RINGBOOT    = $(C_ARTIFACT_DIR)/ringboot
+BOOTIMG     = $(C_ARTIFACT_DIR)/mmuko-os.img
+LIBRIFT_A   = $(CPP_ARTIFACT_DIR)/libriftbridge.a
+LIBRIFT_SO  = $(CPP_ARTIFACT_DIR)/libriftbridge.so
+
+.PHONY: all clean run debug bootimg riftbridge csharp test install help dirs
+
+all: dirs ringboot
 
 help:
 	@echo "MMUKO-OS Build System"
@@ -98,6 +120,11 @@ help:
 	@echo "  make bootimg     - Assemble boot sector image"
 	@echo "  make riftbridge  - Build riftbridge C/C++ library (legacy)"
 	@echo "  make csharp      - Build C# UI (legacy alias)"
+	@echo "  make all         - Build ring boot (default)"
+	@echo "  make ringboot    - Build ring boot executable"
+	@echo "  make bootimg     - Assemble boot sector image"
+	@echo "  make riftbridge  - Build riftbridge C++ library"
+	@echo "  make csharp      - Build C# UI (requires dotnet)"
 	@echo "  make run         - Build and run ring boot"
 	@echo "  make debug       - Build with debug symbols"
 	@echo "  make test        - Run basic tests"
@@ -132,6 +159,7 @@ build-csharp:
 	fi
 
 build-all: build-c build-cpp build-csharp
+	@mkdir -p $(C_ARTIFACT_DIR) $(CPP_ARTIFACT_DIR) $(CSHARP_ARTIFACT_DIR)
 
 # ============================================================================
 # RING BOOT (C executable)
@@ -147,6 +175,10 @@ $(BUILD_DIR)/bootsec.o: $(SRC_DIR)/bootsec.c $(INC_DIR)/bootsec.h
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 $(BUILD_DIR)/ringboot.o: $(SRC_DIR)/ringboot.c $(INC_DIR)/ringboot.h $(INC_DIR)/bootsec.h
+$(C_ARTIFACT_DIR)/bootsec.o: $(SRC_DIR)/bootsec.c $(INC_DIR)/bootsec.h | dirs
+	$(CC) $(CFLAGS) -c -o $@ $<
+
+$(C_ARTIFACT_DIR)/ringboot.o: $(SRC_DIR)/ringboot.c $(INC_DIR)/ringboot.h $(INC_DIR)/bootsec.h | dirs
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 # ============================================================================
@@ -156,6 +188,7 @@ $(BUILD_DIR)/ringboot.o: $(SRC_DIR)/ringboot.c $(INC_DIR)/ringboot.h $(INC_DIR)/
 bootimg: dirs $(BOOTIMG)
 
 $(BOOTIMG): $(ASM_SOURCE)
+$(BOOTIMG): $(ASM_DIR)/boot.asm | dirs
 	$(ASM) $(ASMFLAGS) -o $@ $<
 	@echo "[ASM] Boot image: $@ ($(shell stat -c%s $@ 2>/dev/null || echo '512') bytes)"
 
@@ -185,6 +218,18 @@ $(BUILD_DIR)/riftbridge_c.o: $(SRC_DIR)/riftbridge.c $(INC_DIR)/riftbridge.h
 	$(CC) $(CFLAGS) -fPIC -c -o $@ $<
 
 $(BUILD_DIR)/riftbridge_cpp.o: $(SRC_DIR)/riftbridge.cpp $(INC_DIR)/riftbridge.hpp $(INC_DIR)/riftbridge.h
+$(LIBRIFT_A): $(C_UI_OBJ) $(CXX_OBJECTS) $(C_ARTIFACT_DIR)/bootsec.o
+	$(AR) rcs $@ $^
+	@echo "[BUILD] Static library: $@"
+
+$(LIBRIFT_SO): $(C_UI_OBJ) $(CXX_OBJECTS) $(C_ARTIFACT_DIR)/bootsec.o
+	$(CXX) -shared -o $@ $^ $(LDFLAGS)
+	@echo "[BUILD] Shared library: $@"
+
+$(CPP_ARTIFACT_DIR)/riftbridge_c.o: $(SRC_DIR)/riftbridge.c $(INC_DIR)/riftbridge.h | dirs
+	$(CC) $(CFLAGS) -fPIC -c -o $@ $<
+
+$(CPP_ARTIFACT_DIR)/riftbridge_cpp.o: $(SRC_DIR)/riftbridge.cpp $(INC_DIR)/riftbridge.hpp $(INC_DIR)/riftbridge.h | dirs
 	$(CXX) $(CXXFLAGS) -fPIC -c -o $@ $<
 
 # ============================================================================
@@ -207,6 +252,19 @@ test: ringboot
 	@echo ""
 	@echo "=== MMUKO-OS Ring Boot Tests ==="
 	@echo ""
+csharp:
+	@if command -v $(DOTNET) > /dev/null 2>&1; then \
+		echo "[DOTNET] Building C# riftbridge UI..."; \
+		$(DOTNET) build $(UI_DIR)/rift.csproj -o $(CSHARP_ARTIFACT_DIR) 2>/dev/null || \
+		echo "[DOTNET] Note: Requires .NET project setup. See ui/ directory."; \
+	else \
+		echo "[SKIP] dotnet not found - skipping C# build"; \
+	fi
+
+run: ringboot
+	@./$(RINGBOOT)
+
+test: ringboot
 	@./$(RINGBOOT) && echo "[TEST] Ring boot: PASS" || echo "[TEST] Ring boot: FAIL"
 	@if [ -f $(BOOTIMG) ]; then \
 		SIZE=$$(stat -c%s $(BOOTIMG) 2>/dev/null || echo 0); \
@@ -259,6 +317,10 @@ endif
 # ============================================================================
 # INSTALL (to system or OBINexus toolchain)
 # ============================================================================
+
+clean:
+	rm -rf $(ARTIFACTS_DIR)/c/mmuko-os $(ARTIFACTS_DIR)/cpp/mmuko-os $(CSHARP_ARTIFACT_DIR)
+	@echo "[CLEAN] Build artifacts removed"
 
 install: all bootimg riftbridge
 	@echo "[INSTALL] Build artifacts:"

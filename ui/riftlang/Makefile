@@ -8,8 +8,8 @@ BUILD_DATE      := 2026-02-28
 
 SRC_DIR         := .
 INC_DIR         := .
-OBJ_DIR         := build
-BIN_DIR         := bin
+OBJ_DIR         := ../../artifacts/c/riftlang/build
+BIN_DIR         := ../../artifacts/c/riftlang/bin
 
 # Source files (in current directory)
 SOURCES         := riftlang.c rift_codec.c main.c
