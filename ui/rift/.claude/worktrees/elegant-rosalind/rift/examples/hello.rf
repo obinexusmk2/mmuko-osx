@@ -1,0 +1,9 @@
+/*
+ * Hello World in RIFT (.rf semantic execution file)
+ * The .rf format is the physical/semantic execution layer
+ */
+
+int main() {
+    int message = 42;
+    return message;
+}

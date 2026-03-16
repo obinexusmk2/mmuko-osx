@@ -1,0 +1,2 @@
+/usr/bin/ar qc librift_pipeline.a "CMakeFiles/rift_pipeline.dir/rift-000/rift_000_tokenizer.c.o" "CMakeFiles/rift_pipeline.dir/rift-001/rift_001_process.c.o" "CMakeFiles/rift_pipeline.dir/rift-333/rift_333_ast.c.o" "CMakeFiles/rift_pipeline.dir/rift-444/rift_444_target.c.o" "CMakeFiles/rift_pipeline.dir/rift-555/rift_555_bridge.c.o"
+/usr/bin/ranlib librift_pipeline.a

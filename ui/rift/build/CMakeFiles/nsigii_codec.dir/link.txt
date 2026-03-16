@@ -1,0 +1,2 @@
+/usr/bin/ar qc libnsigii_codec.a "CMakeFiles/nsigii_codec.dir/nsigii-codec/nsigii_codec.c.o"
+/usr/bin/ranlib libnsigii_codec.a

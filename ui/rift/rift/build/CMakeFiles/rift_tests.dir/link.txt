@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wall -Wextra -Werror=implicit-function-declaration CMakeFiles/rift_tests.dir/tests/test_rift.c.o -o rift_tests  librift_pipeline.a libnsigii_codec.a -lm 

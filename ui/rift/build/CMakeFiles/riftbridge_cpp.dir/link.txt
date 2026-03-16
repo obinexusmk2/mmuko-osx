@@ -1,0 +1,2 @@
+/usr/bin/ar qc libriftbridge_cpp.a "CMakeFiles/riftbridge_cpp.dir/rift-555/rift_555_bridge_cpp.cpp.o"
+/usr/bin/ranlib libriftbridge_cpp.a

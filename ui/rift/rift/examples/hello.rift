@@ -1,0 +1,16 @@
+/*
+ * Hello World in RIFT
+ * Demonstrates basic RIFT syntax
+ */
+
+align span<row> {
+    direction: right -> left,
+    bytes: 8^4,
+    type: continuous,
+    open: true
+}
+
+int main() {
+    int message = 42;
+    return message;
+}

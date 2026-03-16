@@ -1,0 +1,64 @@
+using System;
+using System.IO;
+using System.Linq;
+
+namespace ROpen
+{
+    public enum Channel { Legacy, Experimental, Stable, LTS }
+
+    public struct SemVerX
+    {
+        public uint Major;
+        public uint Minor;
+        public uint Patch;
+        public Channel Channel;
+    }
+
+    class Program
+    {
+        static byte Conjugate(byte x) => (byte)(0x0F ^ x);
+
+        static byte[] Encode(byte[] input, bool polarityA)
+        {
+            int outSize = (input.Length + 1) / 2;
+            byte[] output = new byte[outSize];
+            int j = 0;
+
+            for (int i = 0; i < input.Length; i += 2)
+            {
+                byte a = input[i];
+                byte b = (i + 1 < input.Length) ? input[i + 1] : (byte)0x00;
+
+                byte logical = (byte)((polarityA ? a : Conjugate(a)) ^ 
+                                     (polarityA ? Conjugate(b) : b));
+                output[j++] = logical;
+            }
+            return output;
+        }
+
+        static void Main(string[] args)
+        {
+            if (args.Length < 1)
+            {
+                Console.WriteLine("Usage: ropen <file> [A|B]");
+                return;
+            }
+
+            string path = args[0];
+            bool polarityA = args.Length < 2 || args[1] == "A";
+
+            try
+            {
+                byte[] input = File.ReadAllBytes(path);
+                byte[] result = Encode(input, polarityA);
+
+                Console.WriteLine($"Encoded {result.Length} bytes (C# Implementation)");
+                Console.WriteLine(BitConverter.ToString(result.Take(16).ToArray()).Replace("-", " "));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+    }
+}

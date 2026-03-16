@@ -1,0 +1,14 @@
+/mnt/c/Users/OBINexus/Workspace/rift/rift/build/CMakeFiles/nsigii_codec.dir
+/mnt/c/Users/OBINexus/Workspace/rift/rift/build/CMakeFiles/rift_pipeline.dir
+/mnt/c/Users/OBINexus/Workspace/rift/rift/build/CMakeFiles/rift.dir
+/mnt/c/Users/OBINexus/Workspace/rift/rift/build/CMakeFiles/riftbridge_cpp.dir
+/mnt/c/Users/OBINexus/Workspace/rift/rift/build/CMakeFiles/rift_tests.dir
+/mnt/c/Users/OBINexus/Workspace/rift/rift/build/CMakeFiles/package.dir
+/mnt/c/Users/OBINexus/Workspace/rift/rift/build/CMakeFiles/package_source.dir
+/mnt/c/Users/OBINexus/Workspace/rift/rift/build/CMakeFiles/test.dir
+/mnt/c/Users/OBINexus/Workspace/rift/rift/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/OBINexus/Workspace/rift/rift/build/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/OBINexus/Workspace/rift/rift/build/CMakeFiles/list_install_components.dir
+/mnt/c/Users/OBINexus/Workspace/rift/rift/build/CMakeFiles/install.dir
+/mnt/c/Users/OBINexus/Workspace/rift/rift/build/CMakeFiles/install/local.dir
+/mnt/c/Users/OBINexus/Workspace/rift/rift/build/CMakeFiles/install/strip.dir
