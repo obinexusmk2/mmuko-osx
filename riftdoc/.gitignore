@@ -1,0 +1,28 @@
+# Backup directories
+backup_*/
+
+# Log files
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# GitBook build artifacts
+_book/
+node_modules/
+
+# Temporary files
+*.tmp
+*.temp
+
+# OBINexus session files (internal use only)
+*.obinexus
+*.phenomenohog

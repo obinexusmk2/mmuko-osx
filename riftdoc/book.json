@@ -1,0 +1,45 @@
+{
+    "title": "RIFT Ecosystem Documentation",
+    "description": "Comprehensive documentation for the RIFT stage-bound compilation pipeline",
+    "author": "OBINexus Computing",
+    "language": "en",
+    "gitbook": ">=3.0.0",
+    "root": "./docs",
+    "structure": {
+        "readme": "README.md",
+        "summary": "SUMMARY.md"
+    },
+    "plugins": [
+        "theme-default",
+        "search",
+        "sharing",
+        "fontsettings",
+        "highlight",
+        "-lunr",
+        "search-pro",
+        "github",
+        "edit-link",
+        "page-toc-button",
+        "back-to-top-button"
+    ],
+    "pluginsConfig": {
+        "github": {
+            "url": "https://github.com/obinexus/riftdoc"
+        },
+        "edit-link": {
+            "base": "https://github.com/obinexus/riftdoc/edit/main/docs",
+            "label": "Edit This Page"
+        },
+        "sharing": {
+            "facebook": false,
+            "twitter": true,
+            "google": false,
+            "weibo": false,
+            "all": ["twitter", "github"]
+        }
+    },
+    "variables": {
+        "obinexus_session": "'${OBINEXUS_SESSION_ID}'",
+        "migration_tag": "'${MIGRATION_TAG}'"
+    }
+}
